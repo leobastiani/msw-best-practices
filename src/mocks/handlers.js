@@ -13,4 +13,11 @@ export const handlers = [
       }),
     )
   }),
+  rest.get('/', (req, res, ctx) => {
+    return res(
+      ctx.json({
+        hello: 'world',
+      }),
+    )
+  }),
 ]

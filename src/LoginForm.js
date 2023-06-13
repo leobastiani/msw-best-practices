@@ -21,6 +21,8 @@ export const LoginForm = () => {
       // for our page to reload upon submit.
       event.preventDefault()
 
+      console.error('some error')
+
       // Perform a POST /login request and send the username
       fetch('/login', {
         method: 'POST',

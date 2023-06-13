@@ -7,7 +7,7 @@ import '@testing-library/jest-dom'
 import { server } from './src/mocks/server'
 
 beforeAll(() => {
-  server.listen()
+  server.listen({onUnhandledRequest: 'error'})
 })
 
 afterEach(() => {
@@ -17,3 +17,7 @@ afterEach(() => {
 afterAll(() => {
   server.close()
 })
+
+import failOnConsole from 'jest-fail-on-console'
+
+failOnConsole()
